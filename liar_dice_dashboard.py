@@ -159,7 +159,7 @@ def main():
     else:
         dices = None
 
-    dc = DiceCup(dices, 6)
+    dc = DiceCup(dices, num_people)
     
     # Plot data and display on dashboard
     if dices:
