@@ -148,15 +148,15 @@ def main():
     # Set sidebar title and widgets
     st.sidebar.title('Data Input')
     
+    how_to_use = '''佢會show個win rate matrix。\n人地嗌咩number，你可以揀信唔信。\n自己嗌個陣就要揀唔信(pre-alpha緊... 未得閒搞好佢住)。\nPure啫係嗌齋。'''
+    st.sidebar.write('How to use:')
+    st.sidebar.write(how_to_use)
+    
     num_people = st.sidebar.number_input('Number of People', min_value=1, max_value=10, value=5)
     dices = st.sidebar.text_input('Your dices (comma-separated integers e.g. 1,2,3,1,2)')
     isPure = st.sidebar.radio('Pure or not', ('Not', 'Pure'))
     isBelieve = st.sidebar.radio('Do you believe', ('Not', 'Believe'))
     go = st.sidebar.button('Analyze')
-    
-    how_to_use = '''佢會show個win rate matrix。\n人地嗌咩number，你可以揀信唔信。\n自己嗌個陣就要揀唔信(pre-alpha緊... 未得閒搞好佢住)。\nPure啫係嗌齋。'''
-    st.sidebar.write('How to use:')
-    st.sidebar.write(how_to_use)
 
     # Parse comma-separated string into list of integers
     if dices:
