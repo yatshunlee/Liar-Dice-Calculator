@@ -155,7 +155,8 @@ def main():
     go = st.sidebar.button('Analyze')
     
     how_to_use = '''佢會show個win rate matrix。\n人地嗌咩number，你可以揀信唔信。\n自己嗌個陣就要揀唔信(pre-alpha緊... 未得閒搞好佢住)。\nPure啫係嗌齋。'''
-    st.sidebar.write()
+    st.sidebar.write('How to use:')
+    st.sidebar.write(how_to_use)
 
     # Parse comma-separated string into list of integers
     if dices:
